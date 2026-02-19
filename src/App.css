@@ -1,0 +1,106 @@
+/* CARBION App Styles */
+
+/* Ensure smooth scroll behavior is disabled for GSAP */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Section base styles */
+.section-pinned {
+  will-change: transform;
+}
+
+/* Image optimization */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Button hover effects */
+.btn-primary,
+.btn-outline {
+  will-change: transform;
+}
+
+/* Form input focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 1px #C6A85C;
+}
+
+/* Smooth transitions for interactive elements */
+a,
+button {
+  transition: all 0.2s ease;
+}
+
+/* Hide scrollbar for cleaner look while maintaining functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-pinned {
+    min-height: 100vh;
+    height: auto;
+  }
+  
+  .hero-headline,
+  .product-headline,
+  .production-headline,
+  .material-headline,
+  .logistics-headline,
+  .quality-headline,
+  .sustainability-headline,
+  .partnership-headline {
+    width: 90vw !important;
+  }
+  
+  .hero-body,
+  .product-body,
+  .production-body,
+  .material-body,
+  .logistics-body,
+  .quality-body,
+  .sustainability-body,
+  .partnership-body {
+    width: 90vw !important;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
